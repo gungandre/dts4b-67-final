@@ -11,7 +11,11 @@ const Movielist = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(data());
+    try {
+      dispatch(data());
+    } catch (err) {
+      console.log(err);
+    }
   }, []);
 
   const setSortParam = (type) => {

@@ -1,13 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { type } from "@testing-library/user-event/dist/type";
+
 import axios from "axios";
 
 const initialState = {
   username: "",
   password: "",
 };
-
-const initialState2 = {};
 
 const stateMovie = { moviess: [] };
 
@@ -54,7 +52,7 @@ const moviesSlice = createSlice({
         state.moviess.push(...data);
       } else if (more === 0) {
         console.log(more);
-        let hapus = state.moviess.splice(0, state.moviess.length);
+        state.moviess.splice(0, state.moviess.length);
         state.moviess.push(...data);
       }
     });
