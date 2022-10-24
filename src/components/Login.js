@@ -6,16 +6,13 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import { movies } from "../reducers/reducer";
+
 import { useDispatch } from "react-redux";
 import { data } from "../reducers/reducer";
 
-import {
-  sendPasswordResetEmail,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { auth } from "../config/firebase";
@@ -24,8 +21,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
-  const [emaill, setEmail] = useState("");
-  const [passwordd, setPasswordd] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -76,7 +71,6 @@ const Login = () => {
               name="email"
               autoComplete="email"
               autoFocus
-              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               margin="normal"
@@ -87,7 +81,6 @@ const Login = () => {
               type="password"
               id="password"
               autoComplete="current-password"
-              onChange={(e) => setPasswordd(e.target.value)}
             />
             <Typography color="red">{errorMessage}</Typography>
             <Button

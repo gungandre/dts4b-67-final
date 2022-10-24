@@ -8,8 +8,8 @@ import Typography from "@mui/material/Typography";
 import { Modal, Rating, Fade, Backdrop } from "@mui/material";
 import { Box } from "@mui/system";
 
-import { useDispatch, useSelector } from "react-redux";
-import { setUsername, setPassword, data } from "../reducers/reducer";
+import { useDispatch } from "react-redux";
+import { data } from "../reducers/reducer";
 
 const style = {
   position: "absolute",

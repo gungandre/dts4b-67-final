@@ -1,12 +1,7 @@
-import { React, useEffect, useState } from "react";
+import { React, useEffect } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setUsername,
-  setPassword,
-  data,
-  selectMovies,
-} from "../reducers/reducer";
+import { data, selectMovies } from "../reducers/reducer";
 import MovieCard from "./MovieCard";
 import { useSearchParams } from "react-router-dom";
 import { SORT } from "../reducers/reducer";
