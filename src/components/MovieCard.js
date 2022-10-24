@@ -25,11 +25,15 @@ const style = {
 const MovieCard = ({ movie }) => {
   const dispatch = useDispatch();
   useEffect(() => {
-    try {
-      dispatch(data());
-    } catch (error) {
-      console.log(error);
-    }
+    const fetchData = async () => {
+      try {
+        await dispatch(data());
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
   }, []);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
