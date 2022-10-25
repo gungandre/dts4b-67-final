@@ -22,6 +22,7 @@ tentang aplikasi:
 nama: I Gusti Ngurah Nyoman Handre Ari Agustina
 pair: 67
 kelas: REA4B
+link web: https://main--gungs-movie.netlify.app/
 
 aplikasi web ini merupakan aplikasi yang menampilkan list film pupuler dan top rated. aplikasi ini dibuat dengan menggunakan library react js dan redux sebagai state managementnya. API yang digunakan pada aplikasi ini adalah https://www.themoviedb.org. fitur unik yang ada di dalam aplikasi ini adalah bisa mensortir list film yang tampil dengan mengklik tombol asc/desc, lalu bisa melihat deskripsi singkat dari film dengan mengklik tombol detail.
 
