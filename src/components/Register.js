@@ -83,7 +83,7 @@ const Register = () => {
                 />
               </Grid>
             </Grid>
-            <Typography color="red"></Typography>
+            <Typography color="red">{errorMessage}</Typography>
             <Button
               type="submit"
               fullWidth

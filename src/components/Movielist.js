@@ -19,7 +19,7 @@ const Movielist = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [dispatch]);
 
   const setSortParam = (type) => {
     queryParams.set("sort", type);
